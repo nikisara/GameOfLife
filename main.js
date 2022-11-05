@@ -56,11 +56,13 @@ function startGame() {
         // console.log(neighbourList)
     }
 
-    console.log(eventQueue)
+    // console.log(eventQueue)
 
     for (let [key, value] of eventQueue) {
         value(key)
     }
+
+    setTimeout(startGame, 100)
 }
 
 function getNeighbouringPixels(x, y, neighbourList) {
